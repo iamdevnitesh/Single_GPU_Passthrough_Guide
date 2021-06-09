@@ -268,7 +268,6 @@ So, now what we did is we made our nvidia card passthrough vfio-pci which we wil
 Now, we'll ensure that if IOMMU Groups are valid, In short we'll see what are all the devices we can use in our virtual machine**
 
 ### Step 11: Copy the command given below and paste it in terminal
-	
 	#!/bin/bash
 	shopt -s nullglob
 	for g in `find /sys/kernel/iommu_groups/* -maxdepth 0 -type d | sort -V`; do
@@ -317,8 +316,10 @@ IOMMU Group 11:
 ```
 
 In the above output we can see different IOMMU Groups.
-Group 1: nvidia Drivers
-Group 10: audio drivers, ethernet drivers
+
+**Group 1: nvidia Drivers**
+
+**Group 10: audio drivers, ethernet drivers**
 
 ### STEP 11: CREATING VIRTUAL MACHINE
 Here its Just a GUI thing. Just Follow me.
