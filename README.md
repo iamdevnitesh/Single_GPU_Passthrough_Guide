@@ -165,4 +165,97 @@ It will also ask "Do you wan to edit it?". Press n
 
 
 
-### Step 10: Now 
+### Step 10: Now Follow the commands given below:
+    sudo reboot
+    
+After reboot is complete open up terminal and type
+       
+      lspci -k
+      
+This command will give output something/similar to this:
+```
+[niteshkumar@fedora ~]$ lspci -k
+00:00.0 Host bridge: Intel Corporation 8th Gen Core Processor Host Bridge/DRAM Registers (rev 0a)
+	DeviceName: Onboard - Other
+	Subsystem: Micro-Star International Co., Ltd. [MSI] Device 7b17
+	Kernel driver in use: skl_uncore
+	Kernel modules: ie31200_edac
+00:01.0 PCI bridge: Intel Corporation 6th-10th Gen Core Processor PCIe Controller (x16) (rev 0a)
+	Kernel driver in use: pcieport
+00:02.0 VGA compatible controller: Intel Corporation CoffeeLake-S GT2 [UHD Graphics 630]
+	DeviceName: Onboard - Video
+	Subsystem: Micro-Star International Co., Ltd. [MSI] Device 7b17
+	Kernel driver in use: i915
+	Kernel modules: i915
+00:08.0 System peripheral: Intel Corporation Xeon E3-1200 v5/v6 / E3-1500 v5 / 6th/7th/8th Gen Core Processor Gaussian Mixture Model
+	DeviceName: Onboard - Other
+	Subsystem: Micro-Star International Co., Ltd. [MSI] Device 7b17
+00:12.0 Signal processing controller: Intel Corporation Cannon Lake PCH Thermal Controller (rev 10)
+	DeviceName: Onboard - Other
+	Subsystem: Micro-Star International Co., Ltd. [MSI] Device 7b17
+	Kernel driver in use: intel_pch_thermal
+	Kernel modules: intel_pch_thermal
+00:14.0 USB controller: Intel Corporation Cannon Lake PCH USB 3.1 xHCI Host Controller (rev 10)
+	DeviceName: Onboard - Other
+	Subsystem: Micro-Star International Co., Ltd. [MSI] Device 7b17
+	Kernel driver in use: xhci_hcd
+00:14.2 RAM memory: Intel Corporation Cannon Lake PCH Shared SRAM (rev 10)
+	DeviceName: Onboard - Other
+	Subsystem: Intel Corporation Device 7270
+00:14.3 Network controller: Intel Corporation Cannon Lake PCH CNVi WiFi (rev 10)
+	DeviceName: Onboard - Ethernet
+	Subsystem: Intel Corporation Device 02a4
+	Kernel driver in use: iwlwifi
+	Kernel modules: iwlwifi
+00:16.0 Communication controller: Intel Corporation Cannon Lake PCH HECI Controller (rev 10)
+	DeviceName: Onboard - Other
+	Subsystem: Micro-Star International Co., Ltd. [MSI] Device 7b17
+	Kernel driver in use: mei_me
+	Kernel modules: mei_me
+00:17.0 SATA controller: Intel Corporation Cannon Lake PCH SATA AHCI Controller (rev 10)
+	DeviceName: Onboard - SATA
+	Subsystem: Micro-Star International Co., Ltd. [MSI] Device 7b17
+	Kernel driver in use: ahci
+00:1b.0 PCI bridge: Intel Corporation Cannon Lake PCH PCI Express Root Port #17 (rev f0)
+	Kernel driver in use: pcieport
+00:1f.0 ISA bridge: Intel Corporation Z390 Chipset LPC/eSPI Controller (rev 10)
+	DeviceName: Onboard - Other
+	Subsystem: Micro-Star International Co., Ltd. [MSI] Device 7b17
+00:1f.3 Audio device: Intel Corporation Cannon Lake PCH cAVS (rev 10)
+	DeviceName: Onboard - Sound
+	Subsystem: Micro-Star International Co., Ltd. [MSI] Device 7b17
+	Kernel driver in use: snd_hda_intel
+	Kernel modules: snd_hda_intel, snd_soc_skl, snd_sof_pci_intel_cnl
+00:1f.4 SMBus: Intel Corporation Cannon Lake PCH SMBus Controller (rev 10)
+	DeviceName: Onboard - Other
+	Subsystem: Micro-Star International Co., Ltd. [MSI] Device 7b17
+	Kernel driver in use: i801_smbus
+	Kernel modules: i2c_i801
+00:1f.5 Serial bus controller [0c80]: Intel Corporation Cannon Lake PCH SPI Controller (rev 10)
+	DeviceName: Onboard - Other
+	Subsystem: Micro-Star International Co., Ltd. [MSI] Device 7b17
+00:1f.6 Ethernet controller: Intel Corporation Ethernet Connection (7) I219-V (rev 10)
+	DeviceName: Onboard - Ethernet
+	Subsystem: Micro-Star International Co., Ltd. [MSI] Device 7b17
+	Kernel driver in use: e1000e
+	Kernel modules: e1000e
+01:00.0 VGA compatible controller: NVIDIA Corporation TU106 [GeForce RTX 2070] (rev a1)
+	Subsystem: Micro-Star International Co., Ltd. [MSI] Device 3733
+	Kernel driver in use: vfio-pci
+	Kernel modules: nouveau
+01:00.1 Audio device: NVIDIA Corporation TU106 High Definition Audio Controller (rev a1)
+	Subsystem: Micro-Star International Co., Ltd. [MSI] Device 3733
+	Kernel driver in use: vfio-pci
+	Kernel modules: snd_hda_intel
+01:00.2 USB controller: NVIDIA Corporation TU106 USB 3.1 Host Controller (rev a1)
+	Subsystem: Micro-Star International Co., Ltd. [MSI] Device 3733
+	Kernel driver in use: xhci_hcd
+01:00.3 Serial bus controller [0c80]: NVIDIA Corporation TU106 USB Type-C UCSI Controller (rev a1)
+	Subsystem: Micro-Star International Co., Ltd. [MSI] Device 3733
+	Kernel driver in use: nvidia-gpu
+	Kernel modules: i2c_nvidia_gpu
+02:00.0 Non-Volatile memory controller: Micron Technology Inc Device 5405
+	Subsystem: Micron Technology Inc Device 0100
+	Kernel driver in use: nvme
+	Kernel modules: nvme
+```
