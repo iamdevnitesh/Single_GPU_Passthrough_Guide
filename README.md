@@ -381,3 +381,17 @@ A pop up will appear as shown below. Click on **Yes**.
 On the Next Window choose the amount of RAM and CPU cores you want to give to the Virtual Machine.
 **NOTE** : Recommended Half the RAM and Half the CPU
 *For My setup I am giving 16GB RAM and 3 CPUs.*
+Click the forward button as shown below.
+   <p align="center">
+       <img src= https://user-images.githubusercontent.com/73643989/121377770-3fd68980-c960-11eb-9d22-9bfd01555972.png | width=900>
+   </p>
+
+On the Next window you will be asked to mention a disk space you want to give to your Virtual Machine.
+*I gave around 250GB of storage"*
+**NOTE**: Make sure you have enough space on you disk before giving it.
+After entering the detail click **Forward**
+   <p align="center">
+       <img src= https://user-images.githubusercontent.com/73643989/121378169-947a0480-c960-11eb-8409-98a9aa3f0998.png | width=900>
+   </p>
+
+On the next window select the option :ballot_box_with_check: Customize Configuration Before Installation.
