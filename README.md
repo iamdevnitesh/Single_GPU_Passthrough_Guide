@@ -132,4 +132,12 @@ Most probably there won't be any update if there are complete it.
 
 
 
-### Step 9: Clone my github to Downloads folder.
+### Step 9: Follow the Commands given below:
+    
+    cd Downloads
+    
+    git clone https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide.git
+    
+    cd Single_GPU_Passthrough_Guide
+    
+    chmod +x gpu_passhthrough.sh
