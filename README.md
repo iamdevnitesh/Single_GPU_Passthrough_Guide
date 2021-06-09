@@ -326,5 +326,5 @@ Here its Just a GUI thing. Just Follow me.
 ### i) Open the Virtual Machine from menu ->
    
    <p align="center">
-       <img src=https://user-images.githubusercontent.com/73643989/121346534-dea0bd00-c943-11eb-8949-365d4803ac17.png | width=100>
+       <img src=https://user-images.githubusercontent.com/73643989/121346534-dea0bd00-c943-11eb-8949-365d4803ac17.png | width=900>
    </p>
