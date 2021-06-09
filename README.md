@@ -354,3 +354,6 @@ You will reach a window as shown below. Click **Browse**.
    
 Again a new window will pop up as shown below. Select **Browser Local** located at bottom right of window.
 
+   <p align="center">
+       <img src= | width=900>
+   </p>
