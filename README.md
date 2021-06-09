@@ -28,6 +28,7 @@ This guide is for all the people who wants to use linux and windows/other OS at 
 ## STEPS
 
 ### Step 1: Install fedora 34 using this [guide].
+
 ### Step 2: After installing open up the terminal and type
     sudo dnf update -y
 and press enter.
@@ -38,8 +39,11 @@ and press enter.
 ### Step 3: After the update is complete type
     sudo shutdown
 in the terminal and press Enter.
-### Step 4: Remove your HDMI/DP from the GPU slot and connect it to the Motherboard slot.
+
+### Step 4: Changing the Display adapter
+Remove the cable connected to GPU HDMI/DP port and connect it to the motherboard. So, that intel iGPU will be used as a display adapter for linux.
    <p align="center">
-       <img width="460" height="300" src="![port_switch](https://user-images.githubusercontent.com/73643989/121296648-039f1c80-c8bf-11eb-86d2-d1411506c5d8.jpg)">
+       <img src=https://user-images.githubusercontent.com/73643989/121302366-34ab3b80-c917-11eb-8b48-518436328315.png>
    </p>
+   
 ### Step 5: Boot into your BIOS and go to advance settings and change Intel Graphics Configuration to IGD instead of PEG.
