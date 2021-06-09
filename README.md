@@ -37,13 +37,15 @@ This guide is for all the people who wants to use linux and windows/other OS at 
 
 ## STEPS
 
-### Step 1: Install fedora 34 using this [guide].
+### Step 1: FEDORA 34 INSTALLATION.
 
 
 
-### Step 2: After installing open up the terminal and type
+### Step 2: POST INSTALLATION SETUP
+
+After installing open up the terminal and type
     sudo dnf update -y
-and press enter.
+and press enter as shown below.
    <p align="center">
        <img src=https://user-images.githubusercontent.com/73643989/121302116-d2523b00-c916-11eb-8896-aac80b7811c7.png>
    </p>
