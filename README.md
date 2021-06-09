@@ -12,6 +12,7 @@ This guide is for all the people who wants to use linux and windows/other OS at 
 3. Monitor - A single monitor is enough but if you have 2 monitors it will be more efficient.
 4. Make sure you have enough RAM to make both host and virtual OS work.
 5. Any Linux Distribution.
+6. Downloaded Windows 10 ISO 64-bit
 
 ## My Setup:
 1. CPU - [Intel® Core™ i5-9600K Processor](https://ark.intel.com/content/www/us/en/ark/products/134896/intel-core-i5-9600k-processor-9m-cache-up-to-4-60-ghz.html)
@@ -182,7 +183,7 @@ This command will give output something/similar to this:
 	Kernel modules: ie31200_edac
 00:01.0 PCI bridge: Intel Corporation 6th-10th Gen Core Processor PCIe Controller (x16) (rev 0a)
 	Kernel driver in use: pcieport
-*00:02.0 VGA compatible controller: Intel Corporation CoffeeLake-S GT2 [UHD Graphics 630]
+00:02.0 VGA compatible controller: Intel Corporation CoffeeLake-S GT2 [UHD Graphics 630]			//THIS SHOULD BE PRESENT WHICH WILL HELP INTEL GPU RUN ON LINUX
 	DeviceName: Onboard - Video
 	Subsystem: Micro-Star International Co., Ltd. [MSI] Device 7b17
 	Kernel driver in use: i915
@@ -239,14 +240,14 @@ This command will give output something/similar to this:
 	Subsystem: Micro-Star International Co., Ltd. [MSI] Device 7b17
 	Kernel driver in use: e1000e
 	Kernel modules: e1000e
-**01:00.0 VGA compatible controller: NVIDIA Corporation TU106 [GeForce RTX 2070] (rev a1)
+01:00.0 VGA compatible controller: NVIDIA Corporation TU106 [GeForce RTX 2070] (rev a1)		//THE NVIDIA CARD SHOULD BE vfio-pci in kernel driver in use
 	Subsystem: Micro-Star International Co., Ltd. [MSI] Device 3733
 	Kernel driver in use: vfio-pci
 	Kernel modules: nouveau
-01:00.1 Audio device: NVIDIA Corporation TU106 High Definition Audio Controller (rev a1)
+01:00.1 Audio device: NVIDIA Corporation TU106 High Definition Audio Controller (rev a1)	//Same for this nvidia card
 	Subsystem: Micro-Star International Co., Ltd. [MSI] Device 3733
 	Kernel driver in use: vfio-pci
-	Kernel modules: snd_hda_intel**
+	Kernel modules: snd_hda_intel
 01:00.2 USB controller: NVIDIA Corporation TU106 USB 3.1 Host Controller (rev a1)
 	Subsystem: Micro-Star International Co., Ltd. [MSI] Device 3733
 	Kernel driver in use: xhci_hcd
@@ -259,3 +260,71 @@ This command will give output something/similar to this:
 	Kernel driver in use: nvme
 	Kernel modules: nvme
 ```
+
+
+
+**Now lets us learn something with reference to the above output.
+So, now what we did is we made our nvidia card passthrough vfio-pci which we will be using in our virtual machine
+Now, we'll ensure that if IOMMU Groups are valid, In short we'll see what are all the devices we can use in our virtual machine**
+
+### Step 11: Copy the command given below and paste it in terminal
+	
+	#!/bin/bash
+	shopt -s nullglob
+	for g in `find /sys/kernel/iommu_groups/* -maxdepth 0 -type d | sort -V`; do
+    		echo "IOMMU Group ${g##*/}:"
+    		for d in $g/devices/*; do
+        		echo -e "\t$(lspci -nns ${d##*/})"
+    		done;
+	done;
+	
+	
+My output:
+```
+IOMMU Group 0:
+	00:00.0 Host bridge [0600]: Intel Corporation 8th Gen Core Processor Host Bridge/DRAM Registers [8086:3ec2] (rev 0a)
+IOMMU Group 1:
+	00:01.0 PCI bridge [0604]: Intel Corporation 6th-10th Gen Core Processor PCIe Controller (x16) [8086:1901] (rev 0a)
+	01:00.0 VGA compatible controller [0300]: NVIDIA Corporation TU106 [GeForce RTX 2070] [10de:1f02] (rev a1)
+	01:00.1 Audio device [0403]: NVIDIA Corporation TU106 High Definition Audio Controller [10de:10f9] (rev a1)
+	01:00.2 USB controller [0c03]: NVIDIA Corporation TU106 USB 3.1 Host Controller [10de:1ada] (rev a1)
+	01:00.3 Serial bus controller [0c80]: NVIDIA Corporation TU106 USB Type-C UCSI Controller [10de:1adb] (rev a1)
+IOMMU Group 2:
+	00:02.0 VGA compatible controller [0300]: Intel Corporation CoffeeLake-S GT2 [UHD Graphics 630] [8086:3e98]
+IOMMU Group 3:
+	00:08.0 System peripheral [0880]: Intel Corporation Xeon E3-1200 v5/v6 / E3-1500 v5 / 6th/7th/8th Gen Core Processor Gaussian Mixture Model [8086:1911]
+IOMMU Group 4:
+	00:12.0 Signal processing controller [1180]: Intel Corporation Cannon Lake PCH Thermal Controller [8086:a379] (rev 10)
+IOMMU Group 5:
+	00:14.0 USB controller [0c03]: Intel Corporation Cannon Lake PCH USB 3.1 xHCI Host Controller [8086:a36d] (rev 10)
+	00:14.2 RAM memory [0500]: Intel Corporation Cannon Lake PCH Shared SRAM [8086:a36f] (rev 10)
+IOMMU Group 6:
+	00:14.3 Network controller [0280]: Intel Corporation Cannon Lake PCH CNVi WiFi [8086:a370] (rev 10)
+IOMMU Group 7:
+	00:16.0 Communication controller [0780]: Intel Corporation Cannon Lake PCH HECI Controller [8086:a360] (rev 10)
+IOMMU Group 8:
+	00:17.0 SATA controller [0106]: Intel Corporation Cannon Lake PCH SATA AHCI Controller [8086:a352] (rev 10)
+IOMMU Group 9:
+	00:1b.0 PCI bridge [0604]: Intel Corporation Cannon Lake PCH PCI Express Root Port #17 [8086:a340] (rev f0)
+IOMMU Group 10:
+	00:1f.0 ISA bridge [0601]: Intel Corporation Z390 Chipset LPC/eSPI Controller [8086:a305] (rev 10)
+	00:1f.3 Audio device [0403]: Intel Corporation Cannon Lake PCH cAVS [8086:a348] (rev 10)
+	00:1f.4 SMBus [0c05]: Intel Corporation Cannon Lake PCH SMBus Controller [8086:a323] (rev 10)
+	00:1f.5 Serial bus controller [0c80]: Intel Corporation Cannon Lake PCH SPI Controller [8086:a324] (rev 10)
+	00:1f.6 Ethernet controller [0200]: Intel Corporation Ethernet Connection (7) I219-V [8086:15bc] (rev 10)
+IOMMU Group 11:
+	02:00.0 Non-Volatile memory controller [0108]: Micron Technology Inc Device [1344:5405]
+```
+
+In the above output we can see different IOMMU Groups.
+Group 1: nvidia Drivers
+Group 10: audio drivers, ethernet drivers
+
+### STEP 11: CREATING VIRTUAL MACHINE
+Here its Just a GUI thing. Just Follow me.
+
+### i) Open the Virtual Machine from menu ->
+   
+   <p align="center">
+       <img src=https://user-images.githubusercontent.com/73643989/121346534-dea0bd00-c943-11eb-8949-365d4803ac17.png | width=100>
+   </p>
