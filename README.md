@@ -394,4 +394,8 @@ After entering the detail click **Forward**
        <img src= https://user-images.githubusercontent.com/73643989/121378169-947a0480-c960-11eb-8409-98a9aa3f0998.png | width=900>
    </p>
 
-On the next window select the option :ballot_box_with_check: Customize Configuration Before Installation.
+On the next window select the option :ballot_box_with_check: Customize Configuration Before Installation as shown below.
+And click **FINISH**
+   <p align="center">
+       <img src= https://user-images.githubusercontent.com/73643989/121379821-0737af80-c962-11eb-92ba-9bd2b97e76ba.png | width=900>
+   </p>
