@@ -34,6 +34,7 @@ and press enter.
    <p align="center">
        <img width="460" height="300" src="https://drive.google.com/file/d/1AdRBXAI83DkCtEafTTY3nRH1p-izCRCe/view">
    </p>
+   
 ### Step 3: After the update is complete type
     sudo shutdown
 in the terminal and press Enter.
