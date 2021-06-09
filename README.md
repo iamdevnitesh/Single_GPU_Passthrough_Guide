@@ -1,5 +1,14 @@
 # Single_GPU_Passthrough_Guide
 
+## **INDEX**
+### 1. [Who is this for ?](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#who-is-this-for-)
+### 2. [Requirements](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#requirements)
+### 3. [My Setup](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#my-setup)
+### 4. [Warnings](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#warningwarning-warning)
+### 5. [Steps](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#steps)
+### -> 5.1 [Installing Fedora 34](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#step-1-install-fedora-34-using-this-guide)
+### -> 5.2 [
+
 Hello everyone, this guide will help you passthrought your nVidia/AMD GPU on to a Virtual Machine.
 You can follow this Github guide or if you are a linux noob you can follow this video guide.
 
