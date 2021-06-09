@@ -40,10 +40,16 @@ and press enter.
     sudo shutdown
 in the terminal and press Enter.
 
-### Step 4: Changing the Display adapter
+### Step 4: Boot into your BIOS and go to advance settings and change Intel Graphics Configuration to IGD instead of PEG.
+Now, boot into your BIOS and enable Intel VT-d/VT-x or if you have AMD CPU 
+
+#### For MSI Motherboards: 
+Please enter BIOS setup and go to OC => CPU Features => Intel Virtualization Tech => Enable
+
+### Step 5: Changing the Display adapter
 Remove the cable connected to GPU HDMI/DP port and connect it to the motherboard. So, that intel iGPU will be used as a display adapter for linux.
    <p align="center">
        <img src=https://user-images.githubusercontent.com/73643989/121302366-34ab3b80-c917-11eb-8b48-518436328315.png>
    </p>
    
-### Step 5: Boot into your BIOS and go to advance settings and change Intel Graphics Configuration to IGD instead of PEG.
+
