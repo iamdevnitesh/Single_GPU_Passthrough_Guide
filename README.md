@@ -324,10 +324,33 @@ In the above output we can see different IOMMU Groups.
 ### STEP 11: CREATING VIRTUAL MACHINE
 Here its Just a GUI thing. Just Follow me.
 
-### i) Open the Virtual Machine from menu ->
+##### i) Open the Virtual Machine from menu ->
    
    <p align="center">
        <img src=https://user-images.githubusercontent.com/73643989/121346534-dea0bd00-c943-11eb-8949-365d4803ac17.png | width=900>
    </p>
    
    It will ask for password. Enter it.
+   
+##### ii) Create a new Virtual machine 
+On the Top left Click File -> New Virtual Machine.
+
+   <p align="center">
+       <img src=https://user-images.githubusercontent.com/73643989/121352696-bbc5d700-c94a-11eb-86fa-de65367b71d4.png | width=900>
+   </p>
+   
+##### iii) Select the locally installed ISO file
+You'll get a window like shown below. Select **Local Install** & Click **Forward**.
+
+   <p align="center">
+       <img src=https://user-images.githubusercontent.com/73643989/121353091-1c551400-c94b-11eb-9d0e-a469b759676c.png | width=900>
+   </p>
+   
+You will reach a window as shown below. Click **Browse**.
+
+   <p align="center">
+       <img src=https://user-images.githubusercontent.com/73643989/121353414-7655d980-c94b-11eb-9b47-df2f450537fc.png | width=900>
+   </p>
+   
+Again a new window will pop up as shown below. Select **Browser Local** located at bottom right of window.
+
