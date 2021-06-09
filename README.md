@@ -138,6 +138,8 @@ Most probably there won't be any update if there are complete it.
     
     git clone https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide.git
     
-    cd Single_GPU_Passthrough_Guide
+    cd Single_GPU_Passthrough_Guide/
     
-    chmod +x gpu_passhthrough.sh
+    chmod +x gpu_passthrough.sh
+    
+    sudo ./gpu_passthrough.sh
