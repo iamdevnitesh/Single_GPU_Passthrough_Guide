@@ -32,7 +32,7 @@ This guide is for all the people who wants to use linux and windows/other OS at 
     sudo dnf update -y
 and press enter.
    <p align="center">
-       <img width="460" height="300" src="![terminal_sudo_dnf_update_y](https://user-images.githubusercontent.com/73643989/121295581-46f88b80-c8bd-11eb-9879-8c9d750dc013.png)">
+       <img width="460" height="300" src="https://drive.google.com/file/d/1AdRBXAI83DkCtEafTTY3nRH1p-izCRCe/view">
    </p>
 ### Step 3: After the update is complete type
     sudo shutdown
@@ -41,3 +41,4 @@ in the terminal and press Enter.
    <p align="center">
        <img width="460" height="300" src="![port_switch](https://user-images.githubusercontent.com/73643989/121296648-039f1c80-c8bf-11eb-86d2-d1411506c5d8.jpg)">
    </p>
+### Step 5: Boot into your BIOS and go to advance settings and change Intel Graphics Configuration to IGD instead of PEG.
