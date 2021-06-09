@@ -375,5 +375,9 @@ Click on **Forward**.
 A pop up will appear as shown below. Click on **Yes**.
 
    <p align="center">
-       <img src= | width=900>
+       <img src= https://user-images.githubusercontent.com/73643989/121376650-516b6180-c95f-11eb-93b8-b99b24853e22.png | width=900>
    </p>
+
+On the Next Window choose the amount of RAM and CPU cores you want to give to the Virtual Machine.
+**NOTE** : Recommended Half the RAM and Half the CPU
+*For My setup I am giving 16GB RAM and 3 CPUs.*
