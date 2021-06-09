@@ -143,3 +143,26 @@ Most probably there won't be any update if there are complete it.
     chmod +x gpu_passthrough.sh
     
     sudo ./gpu_passthrough.sh
+    
+After running this command some tools will get install. And after than You'll get to see something like this:
+It will also ask "Do you wan to edit it?". Press n     
+     
+     Complete!
+     Creating backups
+     Set Intel IOMMU On
+     GRUB_CMDLINE_LINUX="rhgb quiet intel_iommu=on rd.driver.pre=vfio-pci kvm.ignore_msrs=1"
+
+     Grub was modified to look like this: 
+     GRUB_CMDLINE_LINUX="rhgb quiet intel_iommu=on rd.driver.pre=vfio-pci kvm.ignore_msrs=1"
+
+     Do you want to edit it? y/n
+     n
+     Getting GPU passthrough scripts ready
+     Updating grub and generating initramfs
+     Generating grub configuration file ...
+     Adding boot menu entry for UEFI Firmware Settings ...
+     done
+
+
+
+### Step 10: Now 
