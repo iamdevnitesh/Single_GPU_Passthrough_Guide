@@ -124,5 +124,12 @@ For this part as well you will find solutions on forums or official website.
        <img src=https://user-images.githubusercontent.com/73643989/121302366-34ab3b80-c917-11eb-8b48-518436328315.png>
    </p>
  
-   
 
+
+### Step 8: After logging in to Fedora/OS. Open terminal and update once again using the command given below:
+    sudo dnf update -y
+Most probably there won't be any update if there are complete it.
+
+
+
+### Step 9: Clone my github to Downloads folder.
