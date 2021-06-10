@@ -1,27 +1,32 @@
-# Single_GPU_Passthrough_Guide
+# **Single_GPU_Passthrough_Guide**
 
-## **INDEX**
-### 1. [Who is this for ?](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#who-is-this-for-)
-### 2. [Requirements](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#requirements)
-### 3. [My Setup](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#my-setup)
-### 4. [Warnings](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#warningwarning-warning)
-### 5. [Steps](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#steps)
-###  > 5.1 [INSTALLING Fedora 34](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#step-1-install-fedora-34-using-this-guide)
-###  > 5.2 [POST INSTALLATION SETUP]
-#### 	> 5.2.1 Updating the System
-####    > 5.2.2 Changing BIOS Settings
-#####           > 5.2.2.1 Enabling Virtualization
-#####           > 5.2.2.2 Changing PCI device to IGD
-####     > 5.2.3 Swapping the Monitor Output Cable from GPU to Motherboard
-####     > 5.2.4 Updating the System
-###  > 5.3 Installing Scripts
-####     > 5.3.1 Enabling IOMMU
-####     > 5.3.2 Checking vfio-pci passed devices
-####     > 5.3.3 Checking IOMMU Groups
-###  > 5.4 Creating Virtual Machines
+## Hello everyone, this guide will help you passthrought your nVidia/AMD GPU on to a Virtual Machine. You can follow this Github guide to passthrough your discrete GPU onto a Virtual Machine
+<br>
 
-Hello everyone, this guide will help you passthrought your nVidia/AMD GPU on to a Virtual Machine.
-You can follow this Github guide or if you are a linux noob you can follow this video guide.
+# **Contents**
+## 1. [Who is this for ?](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#who-is-this-for-)
+## 2. [Requirements](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#requirements)
+## 3. [My Setup](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#my-setup)
+## 4. [Warnings](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#warningwarning-warning)
+
+## 5. [Steps](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#steps)
+>
+* ### 5.1 [INSTALLING Fedora 34](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#step-1-install-fedora-34-using-this-guide)
+* ### 5.2 [POST INSTALLATION SETUP]
+  * 5.2.1 Updating the System
+  * 5.2.2 Changing BIOS Settings<br>
+    * 5.2.2.1 Enabling Virtualization
+    * 5.2.2.2 Changing PCI device to IGD
+  * 5.2.3 Swapping the Monitor Output Cable from GPU to Motherboard
+  * 5.2.4 Updating the System<br>
+* ###    5.3 Installing Scripts
+  * 5.3.1 Enabling IOMMU
+  * 5.3.2 Checking vfio-pci passed devices
+  * 5.3.3 Checking IOMMU Groups
+* ###     5.4 Creating Virtual Machines
+
+<br>
+<br>
 
 ## Who is this for ?
 This guide is for all the people who wants to use linux and windows/other OS at same time.
@@ -54,8 +59,8 @@ This guide is for all the people who wants to use linux and windows/other OS at 
 
 ### Step 2: POST INSTALLATION SETUP
 
-After installing open up the terminal and type
-    sudo dnf update -y
+After installing open up the terminal and type<br>
+        sudo dnf update -y<br>
 and press enter as shown below.
    <p align="center">
        <img src=https://user-images.githubusercontent.com/73643989/121302116-d2523b00-c916-11eb-8896-aac80b7811c7.png>
