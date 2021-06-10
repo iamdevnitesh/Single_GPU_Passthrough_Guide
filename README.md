@@ -108,59 +108,62 @@
      * ### [Change Initiate Graphics Adapter to IGD](https://user-images.githubusercontent.com/73643989/121307467-a71f1a00-c91d-11eb-9bfe-de95a2260415.jpeg)
      * ### Step 6: Save and Exit BIOS
 
-
+<br>
+<br>
 
 * ### **Step 2.3 : [Remove the cable connected to GPU HDMI/DP port and connect it to the motherboard. So, that intel iGPU will be used as a display adapter for linux.](https://user-images.githubusercontent.com/73643989/121302366-34ab3b80-c917-11eb-8b48-518436328315.png)**
  
+ <br>
+<br>
+
+* ### **Step 2.4 : Updating the System** 
+    ###  After logging in to Fedora/OS. Open terminal and update once again using the command given below:
+        sudo dnf update -y
 
 
-### Step 8: After logging in to Fedora/OS. Open terminal and update once again using the command given below:
-    sudo dnf update -y
-Most probably there won't be any update if there are complete it.
 
-
-
-### Step 9: Follow the Commands given below:
+### **Step 3 : INSTALLING SCRIPTS**
+* ### Follow the commands given below one by one :
     
-    cd Downloads
+        cd Downloads
     
-    git clone https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide.git
+        git clone https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide.git
     
-    cd Single_GPU_Passthrough_Guide/
+        cd Single_GPU_Passthrough_Guide/
     
-    chmod +x gpu_passthrough.sh
+        chmod +x gpu_passthrough.sh
     
-    sudo ./gpu_passthrough.sh
+        sudo ./gpu_passthrough.sh
     
-After running this command some tools will get install. And after than You'll get to see something like this:
-It will also ask "Do you wan to edit it?". Press n     
+* ### After running this command some tools will get install. And after than You'll get to see something like this:
+* ### It will also ask "Do you wan to edit it?" as shown below. Press n and hit Enter     
      
-     Complete!
-     Creating backups
-     Set Intel IOMMU On
-     GRUB_CMDLINE_LINUX="rhgb quiet intel_iommu=on rd.driver.pre=vfio-pci kvm.ignore_msrs=1"
+         Complete!
+        Creating backups
+        Set Intel IOMMU On
+        GRUB_CMDLINE_LINUX="rhgb quiet intel_iommu=on rd.driver.pre=vfio-pci kvm.ignore_msrs=1"
 
-     Grub was modified to look like this: 
-     GRUB_CMDLINE_LINUX="rhgb quiet intel_iommu=on rd.driver.pre=vfio-pci kvm.ignore_msrs=1"
+        Grub was modified to look like this: 
+        GRUB_CMDLINE_LINUX="rhgb quiet intel_iommu=on rd.driver.pre=vfio-pci kvm.ignore_msrs=1"
 
-     Do you want to edit it? y/n
-     n
-     Getting GPU passthrough scripts ready
-     Updating grub and generating initramfs
-     Generating grub configuration file ...
-     Adding boot menu entry for UEFI Firmware Settings ...
-     done
+        Do you want to edit it? y/n
+        n
+        Getting GPU passthrough scripts ready
+        Updating grub and generating initramfs
+        Generating grub configuration file ...
+        Adding boot menu entry for UEFI Firmware Settings ...
+        done
 
 
 
-### Step 10: Now Follow the commands given below:
-    sudo reboot
+* ### Now reboot PC by copying the command below and pasting it in terminal
+        sudo reboot
     
-After reboot is complete open up terminal and type
+* ### After reboot is complete open up terminal and type
        
-      lspci -k
+        lspci -k
       
-This command will give output something/similar to this:
+* ### This command will give output something/similar to this:
 ```
 [niteshkumar@fedora ~]$ lspci -k
 00:00.0 Host bridge: Intel Corporation 8th Gen Core Processor Host Bridge/DRAM Registers (rev 0a)
