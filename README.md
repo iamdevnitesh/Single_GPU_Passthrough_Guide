@@ -69,7 +69,7 @@
 
 # **STEPS**
 
-### **Step 1 : FEDORA 34 INSTALLATION.**
+### **Step 1 : [FEDORA 34 INSTALLATION](https://www.youtube.com/watch?v=3gIuF_mVGpA).**
 
 <br>
 <br>
