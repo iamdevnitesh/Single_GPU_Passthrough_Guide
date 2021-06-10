@@ -371,4 +371,4 @@ Click the forward button as shown [here](https://user-images.githubusercontent.c
 
 ### **STEP 4 : CUSTOMIZING VIRTUAL MACHINE**
 
-### i) First of all you'll get to a window like [this]().
+### i) First of all you'll get to a window like [this](https://user-images.githubusercontent.com/73643989/121470944-87026000-c9dc-11eb-95de-4f5f1bcd30e7.png).
