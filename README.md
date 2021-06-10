@@ -441,3 +441,27 @@ Click the forward button as shown [here](https://user-images.githubusercontent.c
     * Channel Spice
     * Video QXL
 *  by clicking on them on the left tab and then clicking on remove button at the bottom right of window.
+<br>
+<br>
+
+### ** FINAL NOTES**
+
+Now, Run the VM and change the cable of you monitor which is connected to motherboard to GPU. and install all the drivers on Windows 10.
+Now, You have a Windows 10 machine utilising full system resources running on Linux.
+<br>
+ 
+### **NOTE**: When Shutting down virtual machine you'll have to swap the cable from unplug the display cable from GPU to motherboard because the intel iGPU will render your linux OS.
+<br>
+<br>
+
+## **ADVANGTAGES**:
+1. ### Run Windows/Any other OS inside a Linux machine.
+2. ### Utilise full potential of hardware.
+3. ### If having a dual montior setup. It can be used side by side efficiently.
+
+<br>
+<br>
+
+## **DISADVANTAGES**:
+1. ### For Single Monitor setups changing display cable from GPU to Motherboard again and again in annoying.
+2. ### Not recommended for Lower-End Setups and Laptops.
