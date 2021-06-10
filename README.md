@@ -384,7 +384,7 @@ Click the forward button as shown [here](https://user-images.githubusercontent.c
 
 ### **WINDOWS INSTALLATION**
 ### **NOTE**: As soon as the black window pops up. Click inside it. Otherwise you'll have to delete and create the virtual machine again.
-### i) Click on Begin Installation after completing the STEP 4. As shown [here](https://user-images.githubusercontent.com/73643989/121479723-f2056400-c9e7-11eb-9556-0de8fde4bbea.png) in the top left corner.
+### i) Click on Begin Installation after completing the Customization of Virtual Machine. As shown [here](https://user-images.githubusercontent.com/73643989/121479723-f2056400-c9e7-11eb-9556-0de8fde4bbea.png) in the top left corner.
 ### ii) A black window will appear and it will ask press any key to continue.
 * Quickly Press any key. And you'll be prompted to Windows 10 Installation.
   
