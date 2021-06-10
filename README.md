@@ -6,19 +6,19 @@
 ### 3. [My Setup](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#my-setup)
 ### 4. [Warnings](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#warningwarning-warning)
 ### 5. [Steps](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#steps)
-### -> 5.1 [INSTALLING Fedora 34](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#step-1-install-fedora-34-using-this-guide)
-### -> 5.2 [POST INSTALLATION SETUP]
-#### 	-> 5.2.1 Updating the System
-####    -> 5.2.2 Changing BIOS Settings
-#####           -> 5.2.2.1 Enabling Virtualization
-#####           -> 5.2.2.2 Changing PCI device to IGD
-####     -> 5.2.3 Swapping the Monitor Output Cable from GPU to Motherboard
-####     -> 5.2.4 Updating the System
-### -> 5.3 Installing Scripts
-####     -> 5.3.1 Enabling IOMMU
-####     -> 5.3.2 Checking vfio-pci passed devices
-####     -> 5.3.3 Checking IOMMU Groups
-### -> 5.4 Creating Virtual Machines
+###  > 5.1 [INSTALLING Fedora 34](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#step-1-install-fedora-34-using-this-guide)
+###  > 5.2 [POST INSTALLATION SETUP]
+#### 	> 5.2.1 Updating the System
+####    > 5.2.2 Changing BIOS Settings
+#####           > 5.2.2.1 Enabling Virtualization
+#####           > 5.2.2.2 Changing PCI device to IGD
+####     > 5.2.3 Swapping the Monitor Output Cable from GPU to Motherboard
+####     > 5.2.4 Updating the System
+###  > 5.3 Installing Scripts
+####     > 5.3.1 Enabling IOMMU
+####     > 5.3.2 Checking vfio-pci passed devices
+####     > 5.3.3 Checking IOMMU Groups
+###  > 5.4 Creating Virtual Machines
 
 Hello everyone, this guide will help you passthrought your nVidia/AMD GPU on to a Virtual Machine.
 You can follow this Github guide or if you are a linux noob you can follow this video guide.
