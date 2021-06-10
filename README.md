@@ -123,7 +123,8 @@
 
 
 ### **Step 3 : INSTALLING SCRIPTS**
-* ### Follow the commands given below one by one :
+* ### **Step 3.1 : Enabling IOMMU**
+  * ### Follow the commands given below one by one :
     
         cd Downloads
     
@@ -135,8 +136,8 @@
     
         sudo ./gpu_passthrough.sh
     
-* ### After running this command some tools will get install. And after than You'll get to see something like this:
-* ### It will also ask "Do you wan to edit it?" as shown below. Press n and hit Enter     
+  * ### After running this command some tools will get install. And after than You'll get to see something like this:
+  * ### It will also ask "Do you wan to edit it?" as shown below. Press n and hit Enter     
      
          Complete!
         Creating backups
@@ -156,14 +157,16 @@
 
 
 
-* ### Now reboot PC by copying the command below and pasting it in terminal
+  * ### Now reboot PC by copying the command below and pasting it in terminal
         sudo reboot
-    
-* ### After reboot is complete open up terminal and type
+
+* ### **Step 3.2 : Checking vfio passed devices**
+
+  * ### After reboot is complete open up terminal and type
        
         lspci -k
       
-* ### This command will give output similar to this:
+  * ### This command will give output similar to this:
 ```
 [niteshkumar@fedora ~]$ lspci -k
 00:00.0 Host bridge: Intel Corporation 8th Gen Core Processor Host Bridge/DRAM Registers (rev 0a)
@@ -253,9 +256,20 @@
 
 
 
-**Now lets us learn something with reference to the above output.
-So, now what we did is we made our nvidia card passthrough vfio-pci which we will be using in our virtual machine
-Now, we'll ensure that if IOMMU Groups are valid, In short we'll see what are all the devices we can use in our virtual machine**
+* ### ** *lspci -k* This is very helpful when you like to know the name of the kernel module that will be handling the operations of a particular device.**
+<br>
+
+*  ### If you see the ID 01:00.0 You can see nvidia driver and it is bing used as vfio-pci.
+*  ### Here,are some important IDs check if your devices have similar settings :<br>
+                
+        00:02.0 // Check if the kernel driver in use and kernel modules
+        01:00.0 // are same for your device IDs
+        01:00.1
+        01:00.2
+        01:00.3
+
+
+* ### Now, we'll ensure that if IOMMU Groups are valid, In short we'll see what are all the devices we can use in our virtual machine**
 
 ### Step 11: Copy the command given below and paste it in terminal
 	#!/bin/bash
