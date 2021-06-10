@@ -380,7 +380,7 @@ Click the forward button as shown [here](https://user-images.githubusercontent.c
 
 ### **STEP 5 : WINDOWS INSTALLATION**
 ### **NOTE**: As soon as the black window pops up. Click inside it. Otherwise you'll have to delete and create the virtual machine again.
-### i) Click on Begin Installation after completing the STEP 4. As shown [here]() in the top left corner.
+### i) Click on Begin Installation after completing the STEP 4. As shown [here](https://user-images.githubusercontent.com/73643989/121479723-f2056400-c9e7-11eb-9556-0de8fde4bbea.png) in the top left corner.
 ### ii) A black window will appear and it will ask press any key to continue.
 * Quickly Press any key. And you'll be prompted to Windows 10 Installation.
   
@@ -390,18 +390,18 @@ Click the forward button as shown [here](https://user-images.githubusercontent.c
 ### **STEP 6 : PASSING THROUGH DEVICES
 
 ### i) Open the virtual machine manager
-* Go Click on Edit->Preferences like [this]().
-* And Enable XML Editing as shown [here]().
+* Go Click on Edit->Preferences like [this](https://user-images.githubusercontent.com/73643989/121479792-047f9d80-c9e8-11eb-8d60-f062ff1b210d.png).
+* And Enable XML Editing as shown [here](https://user-images.githubusercontent.com/73643989/121479824-0e090580-c9e8-11eb-9415-9235e2109821.png).
 
 ### ii) Now Right click on the Win10 Virtual Machine and press Open.
 ### A new window will popup. On the top left click the Bulb icon and you'll be prompted to Virtual Machine Configuration
-* ###  In the overview tab click the XML as shown [here]().
+* ###  In the overview tab click the XML as shown [here](https://user-images.githubusercontent.com/73643989/121479875-1bbe8b00-c9e8-11eb-8c28-7da5e518452f.png).
 * The XML file will have many code. Don't change anything now.
-* Now, copy the command given below and paste it as shown [here]().  
+* Now, copy the command given below and paste it as shown [here](https://user-images.githubusercontent.com/73643989/121479941-2a0ca700-c9e8-11eb-9c17-7d5429014437.png).  
   
       <vendor_id state='on' value='randomid'/>
 
-### iii) Now, copy the command given below and paste it as shown [here]().
+### iii) Now, copy the command given below and paste it as shown [here](https://user-images.githubusercontent.com/73643989/121479979-342ea580-c9e8-11eb-8311-17cbeca9cec7.png).
 * Copy the command below,<br>
     
         <kvm>
@@ -411,4 +411,4 @@ Click the forward button as shown [here](https://user-images.githubusercontent.c
 * Hit apply and the bottom right. 
   
 ### iv) Next we'll add our gpu and sound drivers to the virtual machine.
-* Now here listen to me. Go to the [step 3.3]() and copy the bash script and run in your terminal. Now, my configuration gave me the nvidia devices in IOMMU Group 1 and Audio devices in IOMMU Group 10. So, now I'll add all the devices on Group 1 as shown in this [video]().
+* Now here listen to me. Go to the [step 3.3](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#step-33--checking-iommu-groups) and copy the bash script and run in your terminal. Now, my configuration gave me the nvidia devices in IOMMU Group 1 and Audio devices in IOMMU Group 10. So, now I'll add all the devices on Group 1 as shown in this [video]().
