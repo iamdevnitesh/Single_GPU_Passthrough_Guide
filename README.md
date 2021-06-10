@@ -255,32 +255,32 @@
     ```
 
 
-* 
+  
   * ### ** *lspci -k* This is very helpful when you like to know the name of the kernel module that will be handling the operations of a particular device.**
 
 
   *  ### If you see the ID 01:00.0 You can see nvidia driver and it is bing used as vfio-pci.
-*  ### Here,are some important IDs check if your devices have similar settings :<br>
+  *  ### Here,are some important IDs check if your devices have similar settings :<br>
                 
-        00:02.0 // Check if the kernel driver in use and kernel modules
-        01:00.0 // are same for your device IDs
-        01:00.1
-        01:00.2
-        01:00.3
+            00:02.0 // Check if the kernel driver in use and kernel modules
+            01:00.0 // are same for your device IDs
+            01:00.1
+            01:00.2
+            01:00.3
 
-* 
+* ### Step 3.3 : Checking IOMMU Groups 
 
-* ### Now, we'll ensure that if IOMMU Groups are valid, In short we'll see what are all the devices we can use in our virtual machine**
+  * ### Now, we'll ensure that if IOMMU Groups are valid, In short we'll see what are all the devices we can use in our virtual machine**
 
-### Step 11: Copy the command given below and paste it in terminal
-	#!/bin/bash
-	shopt -s nullglob
-	for g in `find /sys/kernel/iommu_groups/* -maxdepth 0 -type d | sort -V`; do
-    		echo "IOMMU Group ${g##*/}:"
+  * ### Copy the command given below and paste it in terminal
+	    #!/bin/bash
+	    shopt -s nullglob
+	    for g in `find /sys/kernel/iommu_groups/* -maxdepth 0 -type d | sort -V`; do
+    	    echo "IOMMU Group ${g##*/}:"
     		for d in $g/devices/*; do
         		echo -e "\t$(lspci -nns ${d##*/})"
     		done;
-	done;
+	    done;
 	
 	
 My output:
