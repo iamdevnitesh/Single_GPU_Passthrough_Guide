@@ -387,7 +387,7 @@ Click the forward button as shown [here](https://user-images.githubusercontent.c
 ### iii) If you are using this guide. You'll probably know how to install Windows 10. So, just install it. and apply all the updates and shut down the windows.
 * And Quit the virtual machine manager.
 
-### **STEP 6 : PASSING THROUGH DEVICES
+### **STEP 6 : PASSING THROUGH DEVICES**
 
 ### i) Open the virtual machine manager
 * Go Click on Edit->Preferences like [this](https://user-images.githubusercontent.com/73643989/121479792-047f9d80-c9e8-11eb-8d60-f062ff1b210d.png).
