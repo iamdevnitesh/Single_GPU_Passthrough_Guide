@@ -16,7 +16,7 @@
   * 5.2.1 Updating the System
   * 5.2.2 Changing BIOS Settings<br>
     * 5.2.2.1 Enabling Virtualization
-    * 5.2.2.2 Changing PCI device to IGD
+    * 5.2.2.2 Making intel iGPU default for BIOS
   * 5.2.3 Swapping the Monitor Output Cable from GPU to Motherboard
   * 5.2.4 Updating the System<br>
 * ###    5.3 Installing Scripts
@@ -69,104 +69,48 @@
 <br>
 <br>
 
-### **Step 2: POST INSTALLATION SETUP**
+### **Step 2 : POST INSTALLATION SETUP**
 
-### After installing open up the terminal and type
+ * ### **Step 2.1 : Updating the System**
+   * ### After installing open up the terminal and type
+            sudo dnf update -y
+   * ### After the update is complete type
+            sudo shutdown
+   * ### in the terminal and press Enter.
 
-    sudo dnf update -y
+<br>
+<br>
 
-### and press enter as shown below.
-   <p align="center">
-       <img src=https://user-images.githubusercontent.com/73643989/121302116-d2523b00-c916-11eb-8896-aac80b7811c7.png | width=90>
-   </p>
-   
-   
-   
-## Step 3: After the update is complete type
+ * ### **Step 2.2 : CHANGING BIOS SETTINGS**
+   * ### **STEP 2.2.1 : Enabling Virtualization**
+     * ### Now, boot into your BIOS and enable Intel VT-d/VT-x or if you have AMD CPU enable AMD-v/AMD-svm
+     * ## For MSI Motherboards: 
+     * ### Please enter BIOS setup and go to: 
+        >### OC => CPU Features  => Intel Virtualization Tech => Enable
+        >### OC => CPU Features => Intel VT-d Tech => Enable
+     * ### **(Note: You can find all these settings for all motherboard vendors on the internet,forums or official site motherboard guide)**
 
-    sudo shutdown
+     * ### Here are the Steps for my Motherboard configuration
+       * ### [This is the default BIOS Page](https://user-images.githubusercontent.com/73643989/121306114-16940a00-c91c-11eb-91d9-6beddc2ad11c.jpeg)
+       * ### [Click on OC](https://user-images.githubusercontent.com/73643989/121306198-2b709d80-c91c-11eb-8a1e-6c4d3c53849a.jpeg) 
+       * ### [Scroll down till you see CPU features](https://user-images.githubusercontent.com/73643989/121306247-388d8c80-c91c-11eb-8c04-0407151d2ba6.jpeg)
+       * ### [Click on CPU features and enable Intel Virtualization Tech](https://user-images.githubusercontent.com/73643989/121306300-4b07c600-c91c-11eb-977f-401a26226072.jpeg)
+       * ### [Enable Intel VT-D Tech](https://user-images.githubusercontent.com/73643989/121306353-59ee7880-c91c-11eb-8b46-8515389b8ed0.jpeg)
 
-### in the terminal and press Enter.
 
-
-
-### Step 4: Boot into your BIOS and go to advance settings and change Intel Graphics Configuration to IGD instead of PEG.
-Now, boot into your BIOS and enable Intel VT-d/VT-x or if you have AMD CPU enable AMD-v/AMD-svm
-
-#### For MSI Motherboards: 
-Please enter BIOS setup and go to OC => CPU Features  => Intel Virtualization Tech => Enable
-                                                      => Intel VT-d Tech => Enable
-(Note: You can find all these settings for all motherboard vendors on the internet,forums or official site motherboard guide)
-
-#### Here are the images for my Motherboard configuration
-
-###### This is the default BIOS Page
-   <p align="center">
-       <img src=https://user-images.githubusercontent.com/73643989/121306114-16940a00-c91c-11eb-91d9-6beddc2ad11c.jpeg>
-   </p>
-   
-###### Click on OC
-   <p align="center">
-       <img src=https://user-images.githubusercontent.com/73643989/121306198-2b709d80-c91c-11eb-8a1e-6c4d3c53849a.jpeg>
-   </p>
-   
-###### Scroll down till you see CPU features
-   <p align="center">
-       <img src=https://user-images.githubusercontent.com/73643989/121306247-388d8c80-c91c-11eb-8c04-0407151d2ba6.jpeg>
-   </p>
-   
-###### Click on CPU features and enable Intel Virtualization Tech
-   <p align="center">
-       <img src=https://user-images.githubusercontent.com/73643989/121306300-4b07c600-c91c-11eb-977f-401a26226072.jpeg>
-   </p>
-   
-###### Enable Intel VT-D Tech
-   <p align="center">
-       <img src=https://user-images.githubusercontent.com/73643989/121306353-59ee7880-c91c-11eb-8b46-8515389b8ed0.jpeg>
-   </p>
-   
-   
-
-### Step 5: Changing the Intel Graphics Configuration on BIOS
-For this part as well you will find solutions on forums or official website.
-
-#### Here are the images for my Motherboard configuration
-
-###### This is the default BIOS Page
-   <p align="center">
-       <img src=https://user-images.githubusercontent.com/73643989/121306114-16940a00-c91c-11eb-91d9-6beddc2ad11c.jpeg>
-   </p>
-   
-###### Click on Settings
-   <p align="center">
-       <img src=https://user-images.githubusercontent.com/73643989/121307154-57405300-c91d-11eb-81ee-29a911ff394b.jpeg>
-   </p>
-   
-###### Click on Advanced
-   <p align="center">
-       <img src=https://user-images.githubusercontent.com/73643989/121307251-6d4e1380-c91d-11eb-9b7c-9d77236efa7b.jpeg>
-   </p>
-   
-###### Click on Integrated Graphics Configuration
-   <p align="center">
-       <img src=https://user-images.githubusercontent.com/73643989/121307380-8eaeff80-c91d-11eb-82c7-16d43ac4f0fb.jpeg>
-   </p>
-
-###### Change Initiate Graphics Adapter to IGD
-   <p align="center">
-       <img src=https://user-images.githubusercontent.com/73643989/121307467-a71f1a00-c91d-11eb-9bfe-de95a2260415.jpeg>
-   </p>
+   * ### **Step 2.2.2 : Making intel iGPU default for BIOS**
+     * ### For this part as well you will find solutions on forums or official website.
+     * ### Here are the images for my Motherboard configuration
+     * ### [This is the default BIOS Page](https://user-images.githubusercontent.com/73643989/121306114-16940a00-c91c-11eb-91d9-6beddc2ad11c.jpeg)
+     * ### [Click on Settings](https://user-images.githubusercontent.com/73643989/121307154-57405300-c91d-11eb-81ee-29a911ff394b.jpeg)
+     * ### [Click on Advanced](https://user-images.githubusercontent.com/73643989/121307251-6d4e1380-c91d-11eb-9b7c-9d77236efa7b.jpeg)
+     * ### [Click on Integrated Graphics Configuration](https://user-images.githubusercontent.com/73643989/121307380-8eaeff80-c91d-11eb-82c7-16d43ac4f0fb.jpeg)
+     * ### [Change Initiate Graphics Adapter to IGD](https://user-images.githubusercontent.com/73643989/121307467-a71f1a00-c91d-11eb-9bfe-de95a2260415.jpeg)
+     * ### Step 6: Save and Exit BIOS
 
 
 
-### Step 6: Save and Exit BIOS
-
-
-
-### Step 7: Remove the cable connected to GPU HDMI/DP port and connect it to the motherboard. So, that intel iGPU will be used as a display adapter for linux.
-   <p align="center">
-       <img src=https://user-images.githubusercontent.com/73643989/121302366-34ab3b80-c917-11eb-8b48-518436328315.png>
-   </p>
+* ### **Step 2.3 : [Remove the cable connected to GPU HDMI/DP port and connect it to the motherboard. So, that intel iGPU will be used as a display adapter for linux.](https://user-images.githubusercontent.com/73643989/121302366-34ab3b80-c917-11eb-8b48-518436328315.png)**
  
 
 
