@@ -24,7 +24,7 @@
   * 5.3.2 Checking vfio-pci passed devices
   * 5.3.3 Checking IOMMU Groups
 * ###    5.4 Creating Virtual Machines
-* ###    5.5 Customising Virtual Machine 
+* ###    5.5 Customizing Virtual Machine 
 <br>
 <br>
 
@@ -366,5 +366,9 @@ Click the forward button as shown [here](https://user-images.githubusercontent.c
 * After entering the detail click **Forward** as shown [here](https://user-images.githubusercontent.com/73643989/121378169-947a0480-c960-11eb-8409-98a9aa3f0998.png).
 
 
-### x) On the next window select the option :ballot_box_with_check: Customize Configuration Before Installation as shown [here](https://user-images.githubusercontent.com/73643989/121379821-0737af80-c962-11eb-92ba-9bd2b97e76ba.png).
+### x) On the next window select the option *Customize Configuration Before Installation* as shown [here](https://user-images.githubusercontent.com/73643989/121379821-0737af80-c962-11eb-92ba-9bd2b97e76ba.png).
 * And click **FINISH**.
+
+### **STEP 4 : CUSTOMIZING VIRTUAL MACHINE**
+
+### i) First of all you'll get to a window like [this]().
