@@ -256,7 +256,7 @@
 
 
   
-  * ### ** *lspci -k* This is very helpful when you like to know the name of the kernel module that will be handling the operations of a particular device.**
+  * ###  **```lspci -k``` This is very helpful when you like to know the name of the kernel module that will be handling the operations of a particular device.**
 
 
   *  ### If you see the ID 01:00.0 You can see nvidia driver and it is bing used as vfio-pci.
