@@ -411,4 +411,33 @@ Click the forward button as shown [here](https://user-images.githubusercontent.c
 * Hit apply and the bottom right. 
   
 ### iv) Next we'll add our gpu and sound drivers to the virtual machine.
-* Now here listen to me. Go to the [step 3.3](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#step-33--checking-iommu-groups) and copy the bash script and run in your terminal. Now, my configuration gave me the nvidia devices in IOMMU Group 1 and Audio devices in IOMMU Group 10. So, now I'll add all the devices on Group 1 as shown in this [video]().
+* Now here listen to me. Go to the [step 3.3](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#step-33--checking-iommu-groups) and copy the bash script and run in your terminal. Now, my configuration gave me the nvidia devices in IOMMU Group 1 and Audio devices in IOMMU Group 10. So, now I'll add all the devices on Group 1.
+
+* My [IOMMU Group 1](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#my-output) consist of
+  *    ​01:00.0 NVIDIA Corporation TU106 [GeForce RTX 2070] 
+  *    01:00.1 NVIDIA Corporation TU106 High Definition Audio Controller
+  *    01:00.2 NVIDIA Corporation TU106 USB 3.1 Host Controller
+  *    01:00.3 NVIDIA Corporation TU106 USB Type-C UCSI Controller
+* Add all the devices from IOMMU group except the PCI bridge. You are meant to ignore PCI bridge.
+
+* Next, I'll add my audio devices which are in [IOMMU Group 10](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#my-output).<br>
+    * 00:1f.0 ISA bridge [0601]: Intel Corporation Z390 Chipset LPC/eSPI Controller
+    * 00:1f.3 Audio device [0403]: Intel Corporation Cannon Lake PCH cAVS 
+    * 00:1f.4 SMBus [0c05]: Intel Corporation Cannon Lake PCH SMBus Controller 
+    * 00:1f.5 Serial bus controller [0c80]: Intel Corporation Cannon Lake PCH SPI Controller 
+    * 00:1f.6 Ethernet controller [0200]: Intel Corporation Ethernet Connection (7) I219-V 
+* I'll be adding all these devices.
+
+* ### To add the graphics/audio devices just select the add hardware at the bottom of the screen as shown [here](https://user-images.githubusercontent.com/73643989/121483574-fe8bbb80-c9eb-11eb-95e5-eb6baa6c7104.png).
+
+* ### A new window will popup. Select the PCI Host Device from the left tab and select the devices by checking your IOMMU Groups as shown [here](https://user-images.githubusercontent.com/73643989/121483658-13684f00-c9ec-11eb-9dc7-e48481b16d1a.png).
+* ### **NOTE**: If you get an error with Group viable written on it. It means either there is something you are missing from that IOMMU Group.
+  * ### For example if I get group 10 not viable that means that either there is some device from my IOMMU group 10 that I haven't added to Virtual Machine or I should remove it in order for virtual machine to work.
+
+<br>
+
+* After adding the devices remove the following hardware devices:
+    * Display Spice
+    * Channel Spice
+    * Video QXL
+*  by clicking on them on the left tab and then clicking on remove button at the bottom right of window.
