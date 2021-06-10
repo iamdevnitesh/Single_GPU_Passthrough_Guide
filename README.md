@@ -196,7 +196,7 @@
     00:14.2 RAM memory: Intel Corporation Cannon Lake PCH Shared SRAM (rev 10)
 	        DeviceName: Onboard - Other
 	        Subsystem: Intel Corporation Device 7270
-00:14.3 Network controller: Intel Corporation Cannon Lake PCH CNVi WiFi (rev 10)
+    00:14.3 Network controller: Intel Corporation Cannon Lake PCH CNVi WiFi (rev 10)
 	        DeviceName: Onboard - Ethernet
 	        Subsystem: Intel Corporation Device 02a4
 	        Kernel driver in use: iwlwifi
