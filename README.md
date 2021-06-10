@@ -23,8 +23,8 @@
   * 5.3.1 Enabling IOMMU
   * 5.3.2 Checking vfio-pci passed devices
   * 5.3.3 Checking IOMMU Groups
-* ###     5.4 Creating Virtual Machines
-
+* ###    5.4 Creating Virtual Machines
+* ###    5.5 Customising Virtual Machine 
 <br>
 <br>
 
@@ -268,7 +268,7 @@
             01:00.2
             01:00.3
 
-* ### Step 3.3 : Checking IOMMU Groups 
+* ### **Step 3.3 : Checking IOMMU Groups** 
 
   * ### Now, we'll ensure that if IOMMU Groups are valid, In short we'll see what are all the devices we can use in our virtual machine**
 
@@ -283,124 +283,88 @@
 	    done;
 	
 	
-My output:
-```
-IOMMU Group 0:
-	00:00.0 Host bridge [0600]: Intel Corporation 8th Gen Core Processor Host Bridge/DRAM Registers [8086:3ec2] (rev 0a)
-IOMMU Group 1:
-	00:01.0 PCI bridge [0604]: Intel Corporation 6th-10th Gen Core Processor PCIe Controller (x16) [8086:1901] (rev 0a)
-	01:00.0 VGA compatible controller [0300]: NVIDIA Corporation TU106 [GeForce RTX 2070] [10de:1f02] (rev a1)
-	01:00.1 Audio device [0403]: NVIDIA Corporation TU106 High Definition Audio Controller [10de:10f9] (rev a1)
-	01:00.2 USB controller [0c03]: NVIDIA Corporation TU106 USB 3.1 Host Controller [10de:1ada] (rev a1)
-	01:00.3 Serial bus controller [0c80]: NVIDIA Corporation TU106 USB Type-C UCSI Controller [10de:1adb] (rev a1)
-IOMMU Group 2:
-	00:02.0 VGA compatible controller [0300]: Intel Corporation CoffeeLake-S GT2 [UHD Graphics 630] [8086:3e98]
-IOMMU Group 3:
-	00:08.0 System peripheral [0880]: Intel Corporation Xeon E3-1200 v5/v6 / E3-1500 v5 / 6th/7th/8th Gen Core Processor Gaussian Mixture Model [8086:1911]
-IOMMU Group 4:
-	00:12.0 Signal processing controller [1180]: Intel Corporation Cannon Lake PCH Thermal Controller [8086:a379] (rev 10)
-IOMMU Group 5:
-	00:14.0 USB controller [0c03]: Intel Corporation Cannon Lake PCH USB 3.1 xHCI Host Controller [8086:a36d] (rev 10)
-	00:14.2 RAM memory [0500]: Intel Corporation Cannon Lake PCH Shared SRAM [8086:a36f] (rev 10)
-IOMMU Group 6:
-	00:14.3 Network controller [0280]: Intel Corporation Cannon Lake PCH CNVi WiFi [8086:a370] (rev 10)
-IOMMU Group 7:
-	00:16.0 Communication controller [0780]: Intel Corporation Cannon Lake PCH HECI Controller [8086:a360] (rev 10)
-IOMMU Group 8:
-	00:17.0 SATA controller [0106]: Intel Corporation Cannon Lake PCH SATA AHCI Controller [8086:a352] (rev 10)
-IOMMU Group 9:
-	00:1b.0 PCI bridge [0604]: Intel Corporation Cannon Lake PCH PCI Express Root Port #17 [8086:a340] (rev f0)
-IOMMU Group 10:
-	00:1f.0 ISA bridge [0601]: Intel Corporation Z390 Chipset LPC/eSPI Controller [8086:a305] (rev 10)
-	00:1f.3 Audio device [0403]: Intel Corporation Cannon Lake PCH cAVS [8086:a348] (rev 10)
-	00:1f.4 SMBus [0c05]: Intel Corporation Cannon Lake PCH SMBus Controller [8086:a323] (rev 10)
-	00:1f.5 Serial bus controller [0c80]: Intel Corporation Cannon Lake PCH SPI Controller [8086:a324] (rev 10)
-	00:1f.6 Ethernet controller [0200]: Intel Corporation Ethernet Connection (7) I219-V [8086:15bc] (rev 10)
-IOMMU Group 11:
-	02:00.0 Non-Volatile memory controller [0108]: Micron Technology Inc Device [1344:5405]
-```
+* ### My output:
+  * ```
+    IOMMU Group 0:
+	    00:00.0 Host bridge [0600]: Intel Corporation 8th Gen Core Processor Host Bridge/DRAM Registers [8086:3ec2] (rev 0a)
+    IOMMU Group 1:
+	    00:01.0 PCI bridge [0604]: Intel Corporation 6th-10th Gen Core Processor PCIe Controller (x16) [8086:1901] (rev 0a)
+	    01:00.0 VGA compatible controller [0300]: NVIDIA Corporation TU106 [GeForce RTX 2070] [10de:1f02] (rev a1)
+	    01:00.1 Audio device [0403]: NVIDIA Corporation TU106 High Definition Audio Controller [10de:10f9] (rev a1)
+	    01:00.2 USB controller [0c03]: NVIDIA Corporation TU106 USB 3.1 Host Controller [10de:1ada] (rev a1)
+	    01:00.3 Serial bus controller [0c80]: NVIDIA Corporation TU106 USB Type-C UCSI Controller [10de:1adb] (rev a1)
+    IOMMU Group 2:
+	    00:02.0 VGA compatible controller [0300]: Intel Corporation CoffeeLake-S GT2 [UHD Graphics 630] [8086:3e98]
+    IOMMU Group 3:
+	    00:08.0 System peripheral [0880]: Intel Corporation Xeon E3-1200 v5/v6 / E3-1500 v5 / 6th/7th/8th Gen Core Processor Gaussian Mixture Model [8086:1911]
+    IOMMU Group 4:
+	    00:12.0 Signal processing controller [1180]: Intel Corporation Cannon Lake PCH Thermal Controller [8086:a379] (rev 10)
+    IOMMU Group 5:
+	    00:14.0 USB controller [0c03]: Intel Corporation Cannon Lake PCH USB 3.1 xHCI Host Controller [8086:a36d] (rev 10)
+	    00:14.2 RAM memory [0500]: Intel Corporation Cannon Lake PCH Shared SRAM [8086:a36f] (rev 10)
+    IOMMU Group 6:
+	    00:14.3 Network controller [0280]: Intel Corporation Cannon Lake PCH CNVi WiFi [8086:a370] (rev 10)
+    IOMMU Group 7:
+	    00:16.0 Communication controller [0780]: Intel Corporation Cannon Lake PCH HECI Controller [8086:a360] (rev 10)
+    IOMMU Group 8:
+	    00:17.0 SATA controller [0106]: Intel Corporation Cannon Lake PCH SATA AHCI Controller [8086:a352] (rev 10)
+    IOMMU Group 9:
+	    00:1b.0 PCI bridge [0604]: Intel Corporation Cannon Lake PCH PCI Express Root Port #17 [8086:a340] (rev f0)
+    IOMMU Group 10:
+	    00:1f.0 ISA bridge [0601]: Intel Corporation Z390 Chipset LPC/eSPI Controller [8086:a305] (rev 10)
+	    00:1f.3 Audio device [0403]: Intel Corporation Cannon Lake PCH cAVS [8086:a348] (rev 10)
+	    00:1f.4 SMBus [0c05]: Intel Corporation Cannon Lake PCH SMBus Controller [8086:a323] (rev 10)
+	    00:1f.5 Serial bus controller [0c80]: Intel Corporation Cannon Lake PCH SPI Controller [8086:a324] (rev 10)
+	    00:1f.6 Ethernet controller [0200]: Intel Corporation Ethernet Connection (7) I219-V [8086:15bc] (rev 10)
+    IOMMU Group 11:
+	    02:00.0 Non-Volatile memory controller [0108]: Micron Technology Inc Device [1344:5405]
+    ```
 
-In the above output we can see different IOMMU Groups.
+  * ### In the above output we can see different IOMMU Groups.
 
-**Group 1: nvidia Drivers**
+     * **Group 1: nvidia Drivers**
 
-**Group 10: audio drivers, ethernet drivers**
+     * **Group 10: audio drivers, ethernet drivers**
 
-### STEP 11: CREATING VIRTUAL MACHINE
-Here its Just a GUI thing. Just Follow me.
+### **STEP 4: CREATING VIRTUAL MACHINE**
+* Now, we'll create a virtual machine
 
-##### i) Open the Virtual Machine from menu ->
+### i) Open the Virtual Machine from menu as shown [here](https://user-images.githubusercontent.com/73643989/121346534-dea0bd00-c943-11eb-8949-365d4803ac17.png)
    
-   <p align="center">
-       <img src=https://user-images.githubusercontent.com/73643989/121346534-dea0bd00-c943-11eb-8949-365d4803ac17.png | width=900>
-   </p>
+*   It will ask for password. Enter it.
    
-   It will ask for password. Enter it.
+### ii) Create a new Virtual machine as shown [here](https://user-images.githubusercontent.com/73643989/121352696-bbc5d700-c94a-11eb-86fa-de65367b71d4.png) 
+* On the Top left Click File -> New Virtual Machine.
+
+### iii) Select the locally installed ISO file as shown [here](https://user-images.githubusercontent.com/73643989/121353091-1c551400-c94b-11eb-9d0e-a469b759676c.png)
+* You'll get a window as shown in the above link. Select **Local Install** & Click **Forward**.
+
    
-##### ii) Create a new Virtual machine 
-On the Top left Click File -> New Virtual Machine.
-
-   <p align="center">
-       <img src=https://user-images.githubusercontent.com/73643989/121352696-bbc5d700-c94a-11eb-86fa-de65367b71d4.png | width=900>
-   </p>
+### iv) You will reach a window as shown [here](https://user-images.githubusercontent.com/73643989/121353414-7655d980-c94b-11eb-9b47-df2f450537fc.png). Click **Browse**.
    
-##### iii) Select the locally installed ISO file
-You'll get a window like shown below. Select **Local Install** & Click **Forward**.
+### v) Again a new window will pop up as shown [here](https://user-images.githubusercontent.com/73643989/121353907-fd0ab680-c94b-11eb-94ff-152b23689324.png). Select **Browser Local** located at bottom right of window.
 
-   <p align="center">
-       <img src=https://user-images.githubusercontent.com/73643989/121353091-1c551400-c94b-11eb-9d0e-a469b759676c.png | width=900>
-   </p>
-   
-You will reach a window as shown below. Click **Browse**.
+### vi) Another window will pop up opening the file manager. Browser your Windows_10.iso file through the file manager and Click Open as shown [here](https://user-images.githubusercontent.com/73643989/121354103-33483600-c94c-11eb-93cf-f3be46409b0d.png).
+* As you can see Mine is located at Download.
 
-   <p align="center">
-       <img src=https://user-images.githubusercontent.com/73643989/121353414-7655d980-c94b-11eb-9b47-df2f450537fc.png | width=900>
-   </p>
-   
-Again a new window will pop up as shown below. Select **Browser Local** located at bottom right of window.
 
-   <p align="center">
-       <img src=https://user-images.githubusercontent.com/73643989/121353907-fd0ab680-c94b-11eb-94ff-152b23689324.png | width=900>
-   </p>
+### vii) Now, You'll see a window where the virtual machine will be detecting OS. If somehow Windows 10 is not detected. Enter manually as shown [here](https://user-images.githubusercontent.com/73643989/121354364-70142d00-c94c-11eb-9d3b-3a5ad99040ac.png).
 
-Another window will pop up opening the file manager. Browser your Windows_10.iso file through the file manager and Click Open.
-Mine is located at Download as you can see in the image below.
+* Click on **Forward**.<br>
+* A pop up will appear as shown [here](https://user-images.githubusercontent.com/73643989/121376650-516b6180-c95f-11eb-93b8-b99b24853e22.png). Click on **Yes**.
 
-   <p align="center">
-       <img src=https://user-images.githubusercontent.com/73643989/121354103-33483600-c94c-11eb-93cf-f3be46409b0d.png | width=900>
-   </p>
-   
-Now, You'll see a window where the virtual machine will be detecting OS. If somehow Windows 10 is not detected. Enter manually as shown below
 
-   <p align="center">
-       <img src=https://user-images.githubusercontent.com/73643989/121354364-70142d00-c94c-11eb-9d3b-3a5ad99040ac.png | width=900>
-   </p>
-   
-Click on **Forward**.
-A pop up will appear as shown below. Click on **Yes**.
+### viii) On the Next Window choose the amount of RAM and CPU cores you want to give to the Virtual Machine.
+* **NOTE** : Recommended Half the RAM and Half the CPU.<br>
+* *For My setup I am giving 16GB RAM and 3 CPUs.*
+Click the forward button as shown [here](https://user-images.githubusercontent.com/73643989/121377770-3fd68980-c960-11eb-9d22-9bfd01555972.png).
 
-   <p align="center">
-       <img src= https://user-images.githubusercontent.com/73643989/121376650-516b6180-c95f-11eb-93b8-b99b24853e22.png | width=900>
-   </p>
 
-On the Next Window choose the amount of RAM and CPU cores you want to give to the Virtual Machine.
-**NOTE** : Recommended Half the RAM and Half the CPU
-*For My setup I am giving 16GB RAM and 3 CPUs.*
-Click the forward button as shown below.
-   <p align="center">
-       <img src= https://user-images.githubusercontent.com/73643989/121377770-3fd68980-c960-11eb-9d22-9bfd01555972.png | width=900>
-   </p>
+### ix) On the Next window you will be asked to mention a disk space you want to give to your Virtual Machine.
+* *I gave around 250GB of storage"*.<br>
+* **NOTE**: Make sure you have enough space on you disk before giving it.<br>
+* After entering the detail click **Forward** as shown [here](https://user-images.githubusercontent.com/73643989/121378169-947a0480-c960-11eb-8409-98a9aa3f0998.png).
 
-On the Next window you will be asked to mention a disk space you want to give to your Virtual Machine.
-*I gave around 250GB of storage"*
-**NOTE**: Make sure you have enough space on you disk before giving it.
-After entering the detail click **Forward**
-   <p align="center">
-       <img src= https://user-images.githubusercontent.com/73643989/121378169-947a0480-c960-11eb-8409-98a9aa3f0998.png | width=900>
-   </p>
 
-On the next window select the option :ballot_box_with_check: Customize Configuration Before Installation as shown below.
-And click **FINISH**
-   <p align="center">
-       <img src= https://user-images.githubusercontent.com/73643989/121379821-0737af80-c962-11eb-92ba-9bd2b97e76ba.png | width=900>
-   </p>
+### x) On the next window select the option :ballot_box_with_check: Customize Configuration Before Installation as shown [here](https://user-images.githubusercontent.com/73643989/121379821-0737af80-c962-11eb-92ba-9bd2b97e76ba.png).
+* And click **FINISH**.
