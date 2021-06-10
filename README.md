@@ -163,7 +163,7 @@
        
         lspci -k
       
-* ### This command will give output something/similar to this:
+* ### This command will give output similar to this:
 ```
 [niteshkumar@fedora ~]$ lspci -k
 00:00.0 Host bridge: Intel Corporation 8th Gen Core Processor Host Bridge/DRAM Registers (rev 0a)
