@@ -25,6 +25,7 @@
   * 5.3.3 Checking IOMMU Groups
 * ###    5.4 Creating Virtual Machines
 * ###    5.5 Customizing Virtual Machine 
+* ###    5.6 Windows Installation
 <br>
 <br>
 
@@ -376,3 +377,38 @@ Click the forward button as shown [here](https://user-images.githubusercontent.c
 ### ii) Then move to the CPUs Tab on Left and Change the topology if you want.
 * **NOTE: The above Option ii) is fully optional. You can leave it as it is if you want**.
 * However, I changed my CPU topology to [this](https://user-images.githubusercontent.com/73643989/121471974-2c6a0380-c9de-11eb-9dda-e71fcca14b2d.png). Remember Topology for your CPU may variate.
+
+### **STEP 5 : WINDOWS INSTALLATION**
+### **NOTE**: As soon as the black window pops up. Click inside it. Otherwise you'll have to delete and create the virtual machine again.
+### i) Click on Begin Installation after completing the STEP 4. As shown [here]() in the top left corner.
+### ii) A black window will appear and it will ask press any key to continue.
+* Quickly Press any key. And you'll be prompted to Windows 10 Installation.
+  
+### iii) If you are using this guide. You'll probably know how to install Windows 10. So, just install it. and apply all the updates and shut down the windows.
+* And Quit the virtual machine manager.
+
+### **STEP 6 : PASSING THROUGH DEVICES
+
+### i) Open the virtual machine manager
+* Go Click on Edit->Preferences like [this]().
+* And Enable XML Editing as shown [here]().
+
+### ii) Now Right click on the Win10 Virtual Machine and press Open.
+### A new window will popup. On the top left click the Bulb icon and you'll be prompted to Virtual Machine Configuration
+* ###  In the overview tab click the XML as shown [here]().
+* The XML file will have many code. Don't change anything now.
+* Now, copy the command given below and paste it as shown [here]().  
+  
+      <vendor_id state='on' value='randomid'/>
+
+### iii) Now, copy the command given below and paste it as shown [here]().
+* Copy the command below,<br>
+    
+        <kvm>
+          <hidden state='on'/>
+        </kvm>
+  
+* Hit apply and the bottom right. 
+  
+### iv) Next we'll add our gpu and sound drivers to the virtual machine.
+* Now here listen to me. Go to the [step 3.3]() and copy the bash script and run in your terminal. Now, my configuration gave me the nvidia devices in IOMMU Group 1 and Audio devices in IOMMU Group 10. So, now I'll add all the devices on Group 1 as shown in this [video]().
