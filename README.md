@@ -372,3 +372,4 @@ Click the forward button as shown [here](https://user-images.githubusercontent.c
 ### **STEP 4 : CUSTOMIZING VIRTUAL MACHINE**
 
 ### i) First of all you'll get to a window like [this](https://user-images.githubusercontent.com/73643989/121470944-87026000-c9dc-11eb-95de-4f5f1bcd30e7.png).
+* Change the Firmware From **BIOS** to **UEFI x86_64: /usr/share/edk2/ovmf/OVMF_CODE.fd** as shown [here](https://user-images.githubusercontent.com/73643989/121471593-97670a80-c9dd-11eb-8106-ab566e0c05be.png). 
