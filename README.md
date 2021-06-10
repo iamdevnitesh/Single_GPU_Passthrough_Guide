@@ -331,7 +331,7 @@
 
      * **Group 10: audio drivers, ethernet drivers**
 
-### **STEP 4: CREATING VIRTUAL MACHINE**
+### **CREATING VIRTUAL MACHINE**
 * Now, we'll create a virtual machine
 
 ### i) Open the Virtual Machine from menu as shown [here](https://user-images.githubusercontent.com/73643989/121346534-dea0bd00-c943-11eb-8949-365d4803ac17.png)
@@ -374,7 +374,7 @@ Click the forward button as shown [here](https://user-images.githubusercontent.c
 ### x) On the next window select the option *Customize Configuration Before Installation* as shown [here](https://user-images.githubusercontent.com/73643989/121379821-0737af80-c962-11eb-92ba-9bd2b97e76ba.png).
 * And click **FINISH**.
 
-### **STEP 4 : CUSTOMIZING VIRTUAL MACHINE**
+### **CUSTOMIZING VIRTUAL MACHINE**
 
 ### i) First of all you'll get to a window like [this](https://user-images.githubusercontent.com/73643989/121470944-87026000-c9dc-11eb-95de-4f5f1bcd30e7.png).
 * Change the Firmware From **BIOS** to **UEFI x86_64: /usr/share/edk2/ovmf/OVMF_CODE.fd** as shown [here](https://user-images.githubusercontent.com/73643989/121471593-97670a80-c9dd-11eb-8106-ab566e0c05be.png) and hit apply.
@@ -382,7 +382,7 @@ Click the forward button as shown [here](https://user-images.githubusercontent.c
 * **NOTE: The above Option ii) is fully optional. You can leave it as it is if you want**.
 * However, I changed my CPU topology to [this](https://user-images.githubusercontent.com/73643989/121471974-2c6a0380-c9de-11eb-9dda-e71fcca14b2d.png). Remember Topology for your CPU may variate.
 
-### **STEP 5 : WINDOWS INSTALLATION**
+### **WINDOWS INSTALLATION**
 ### **NOTE**: As soon as the black window pops up. Click inside it. Otherwise you'll have to delete and create the virtual machine again.
 ### i) Click on Begin Installation after completing the STEP 4. As shown [here](https://user-images.githubusercontent.com/73643989/121479723-f2056400-c9e7-11eb-9556-0de8fde4bbea.png) in the top left corner.
 ### ii) A black window will appear and it will ask press any key to continue.
@@ -391,7 +391,7 @@ Click the forward button as shown [here](https://user-images.githubusercontent.c
 ### iii) If you are using this guide. You'll probably know how to install Windows 10. So, just install it. and apply all the updates and shut down the windows.
 * And Quit the virtual machine manager.
 
-### **STEP 6 : PASSING THROUGH DEVICES**
+### **PASSING THROUGH DEVICES**
 
 ### i) Open the virtual machine manager
 * Go Click on Edit->Preferences like [this](https://user-images.githubusercontent.com/73643989/121479792-047f9d80-c9e8-11eb-8d60-f062ff1b210d.png).
@@ -448,7 +448,7 @@ Click the forward button as shown [here](https://user-images.githubusercontent.c
 <br>
 <br>
 
-### ** FINAL NOTES**
+### **FINAL NOTES**
 
 Now, Run the VM and change the cable of you monitor which is connected to motherboard to GPU. and install all the drivers on Windows 10.
 Now, You have a Windows 10 machine utilising full system resources running on Linux.
