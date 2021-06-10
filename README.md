@@ -350,7 +350,7 @@
 ### v) Again a new window will pop up as shown [here](https://user-images.githubusercontent.com/73643989/121353907-fd0ab680-c94b-11eb-94ff-152b23689324.png). Select **Browser Local** located at bottom right of window.
 
 ### vi) Another window will pop up opening the file manager. Browser your Windows_10.iso file through the file manager and Click Open as shown [here](https://user-images.githubusercontent.com/73643989/121354103-33483600-c94c-11eb-93cf-f3be46409b0d.png).
-* As you can see Mine is located in Download.
+* As you can see Mine is located in Downloads.
 
 
 ### vii) Now, You'll see a window where the virtual machine will be detecting OS. If somehow Windows 10 is not detected. Enter manually as shown [here](https://user-images.githubusercontent.com/73643989/121354364-70142d00-c94c-11eb-9d3b-3a5ad99040ac.png).
