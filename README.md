@@ -249,10 +249,10 @@
 	        Kernel driver in use: nvidia-gpu
 	        Kernel modules: i2c_nvidia_gpu
     02:00.0 Non-Volatile memory controller: Micron Technology Inc Device 5405
-	Subsystem: Micron Technology Inc Device 0100
-	    Kernel driver in use: nvme
-	    Kernel modules: nvme
-  ```
+	        Subsystem: Micron Technology Inc Device 0100
+	        Kernel driver in use: nvme
+	        Kernel modules: nvme
+    ```
 
 
 * 
