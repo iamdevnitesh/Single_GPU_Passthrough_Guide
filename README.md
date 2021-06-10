@@ -440,7 +440,9 @@ Click the forward button as shown [here](https://user-images.githubusercontent.c
 
 <br>
 
-* After adding the devices remove the following hardware devices:
+* Then start the Virtual machine and install nvidia/AMD Drivers.
+
+* After installing the GPU drivers remove the following hardware devices:
     * Display Spice
     * Channel Spice
     * Video QXL
@@ -454,7 +456,9 @@ Now, Run the VM and change the cable of you monitor which is connected to mother
 Now, You have a Windows 10 machine utilising full system resources running on Linux.
 <br>
  
-### **NOTE**: When Shutting down virtual machine you'll have to swap the cable from unplug the display cable from GPU to motherboard because the intel iGPU will render your linux OS.
+### **NOTE**: 
+1. ### When Shutting down virtual machine you'll have to swap the cable from unplug the display cable from GPU to motherboard because the intel iGPU will render your linux OS.
+2. ### If after changing the display cable gives you output but doesnot have access to mouse and keyboard. Simply, add USB Host device. So, now whenever the VM starts you'll not be able to use your mouse and gpu in Host machine.
 <br>
 <br>
 
