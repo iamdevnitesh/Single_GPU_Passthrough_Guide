@@ -4,32 +4,32 @@
 <br>
 
 # **Contents**
-## 1. [Who is this for ?](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#who-is-this-for-)
-## 2. [Requirements](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#requirements)
-## 3. [My Setup](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#my-setup)
-## 4. [Warnings](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#warningwarning-warning)
+## 1. [Who is this for ?](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#who-is-this-for-)
+## 2. [Requirements](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#requirements)
+## 3. [My Setup](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#my-setup)
+## 4. [Warnings](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#warningwarning-warning)
 
-## 5. [Steps](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#steps)
+## 5. [Steps](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#steps)
 >
-* ### 5.1 [INSTALLING Fedora 34](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#step-1-install-fedora-34-using-this-guide)
+* ### 5.1 [INSTALLING Fedora 34](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#step-1-install-fedora-34-using-this-guide)
 * ### 5.2 [POST INSTALLATION SETUP]
-  * 5.2.1 [Updating the System](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#step-21--updating-the-system)
-  * 5.2.2 [Changing BIOS Settings](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#step-22--changing-bios-settings)<br>
-    * 5.2.2.1 [Enabling Virtualization](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#step-221--enabling-virtualization)
-    * 5.2.2.2 [Making intel iGPU default for BIOS](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#step-222--making-intel-igpu-default-for-bios)
-  * 5.2.3 [Swapping the Monitor Output Cable from GPU to Motherboard](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#step-23--remove-the-cable-connected-to-gpu-hdmidp-port-and-connect-it-to-the-motherboard-so-that-intel-igpu-will-be-used-as-a-display-adapter-for-linux)
-  * 5.2.4 [Updating the System](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#step-24--updating-the-system)<br>
-* ###    5.3 [Installing Scripts](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#step-3--installing-scripts)
-  * 5.3.1 [Enabling IOMMU](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#step-31--enabling-iommu)
-  * 5.3.2 [Checking vfio-pci passed devices](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#step-32--checking-vfio-passed-devices)
-  * 5.3.3 [Checking IOMMU Groups](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#step-33--checking-iommu-groups)
-* ###    5.4 [Creating Virtual Machines](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#creating-virtual-machine)
-* ###    5.5 [Customizing Virtual Machine](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#customizing-virtual-machine) 
-* ###    5.6 [Windows Installation](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#windows-installation)
-* ###    5.7 [Passing Through Devices](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#passing-through-devices)
-* ###    5.8 [Final Notes](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#final-notes)
-* ###    5.9 [Advantages](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#advangtages)
-* ###    5.10 [Disadvantages](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#disadvantages)
+  * 5.2.1 [Updating the System](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#step-21--updating-the-system)
+  * 5.2.2 [Changing BIOS Settings](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#step-22--changing-bios-settings)<br>
+    * 5.2.2.1 [Enabling Virtualization](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#step-221--enabling-virtualization)
+    * 5.2.2.2 [Making intel iGPU default for BIOS](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#step-222--making-intel-igpu-default-for-bios)
+  * 5.2.3 [Swapping the Monitor Output Cable from GPU to Motherboard](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#step-23--remove-the-cable-connected-to-gpu-hdmidp-port-and-connect-it-to-the-motherboard-so-that-intel-igpu-will-be-used-as-a-display-adapter-for-linux)
+  * 5.2.4 [Updating the System](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#step-24--updating-the-system)<br>
+* ###    5.3 [Installing Scripts](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#step-3--installing-scripts)
+  * 5.3.1 [Enabling IOMMU](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#step-31--enabling-iommu)
+  * 5.3.2 [Checking vfio-pci passed devices](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#step-32--checking-vfio-passed-devices)
+  * 5.3.3 [Checking IOMMU Groups](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#step-33--checking-iommu-groups)
+* ###    5.4 [Creating Virtual Machines](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#creating-virtual-machine)
+* ###    5.5 [Customizing Virtual Machine](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#customizing-virtual-machine) 
+* ###    5.6 [Windows Installation](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#windows-installation)
+* ###    5.7 [Passing Through Devices](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#passing-through-devices)
+* ###    5.8 [Final Notes](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#final-notes)
+* ###    5.9 [Advantages](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#advangtages)
+* ###    5.10 [Disadvantages](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#disadvantages)
 <br>
 <br>
 
