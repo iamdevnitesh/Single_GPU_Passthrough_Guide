@@ -133,7 +133,7 @@
     
         cd Downloads
     
-        git clone https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide.git
+        git clone https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide.git
     
         cd Single_GPU_Passthrough_Guide/
     
