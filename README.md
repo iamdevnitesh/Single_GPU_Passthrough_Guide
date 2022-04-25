@@ -415,16 +415,16 @@ Click the forward button as shown [here](https://user-images.githubusercontent.c
 * Hit apply and the bottom right. 
   
 ### iv) Next we'll add our gpu and sound drivers to the virtual machine.
-* Now here listen to me. Go to the [step 3.3](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#step-33--checking-iommu-groups) and copy the bash script and run in your terminal. Now, my configuration gave me the nvidia devices in IOMMU Group 1 and Audio devices in IOMMU Group 10. So, now I'll add all the devices on Group 1.
+* Now here listen to me. Go to the [step 3.3](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#step-33--checking-iommu-groups) and copy the bash script and run in your terminal. Now, my configuration gave me the nvidia devices in IOMMU Group 1 and Audio devices in IOMMU Group 10. So, now I'll add all the devices on Group 1.
 
-* My [IOMMU Group 1](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#my-output) consist of
+* My [IOMMU Group 1](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#my-output) consist of
   *    ​01:00.0 NVIDIA Corporation TU106 [GeForce RTX 2070] 
   *    01:00.1 NVIDIA Corporation TU106 High Definition Audio Controller
   *    01:00.2 NVIDIA Corporation TU106 USB 3.1 Host Controller
   *    01:00.3 NVIDIA Corporation TU106 USB Type-C UCSI Controller
 * Add all the devices from IOMMU group except the PCI bridge. You are meant to ignore PCI bridge.
 
-* Next, I'll add my audio devices which are in [IOMMU Group 10](https://github.com/iamcodernitesh/Single_GPU_Passthrough_Guide#my-output).<br>
+* Next, I'll add my audio devices which are in [IOMMU Group 10](https://github.com/iamdevnitesh/Single_GPU_Passthrough_Guide#my-output).<br>
     * 00:1f.0 ISA bridge [0601]: Intel Corporation Z390 Chipset LPC/eSPI Controller
     * 00:1f.3 Audio device [0403]: Intel Corporation Cannon Lake PCH cAVS 
     * 00:1f.4 SMBus [0c05]: Intel Corporation Cannon Lake PCH SMBus Controller 
